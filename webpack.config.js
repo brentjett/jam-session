@@ -3,17 +3,25 @@ const path = require( 'path' )
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const production = process.env.NODE_ENV === 'production' ? '.min' : ''
 
-const alias = {}
+const alias = {
+    elements: path.resolve( __dirname, 'src/elements' )
+}
 
 module.exports = {
     watch: true,
     mode: 'development',
     entry: {
-        main: './src/main/index.js'
+        main: './src/main/index.js',
+        elements: './src/elements/index.js'
     },
     output: {
         path: path.resolve( __dirname, 'build' ),
         filename: '[name].bundle' + production + '.js',
+    },
+    devServer: {
+        contentBase: path.join(__dirname, 'build'),
+        compress: true,
+        port: 9000
     },
     resolve: {
         alias
