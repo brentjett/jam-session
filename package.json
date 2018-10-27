@@ -1,7 +1,7 @@
 {
-    "name": "jam-session",
+    "name": "@brentjett/jam-session",
     "version": "0.1.0",
-    "description": "",
+    "description": "A group of tools for designing in the browser.",
     "main": "index.js",
     "scripts": {
         "build": "webpack",
@@ -9,7 +9,12 @@
         "start": "webpack-dev-server --open"
     },
     "author": "Brent Jett",
-    "license": "GPL2",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brentjett/jam-session.git"
+    },
+    "keywords": [],
     "dependencies": {
         "@polymer/lit-element": "^0.6.2",
         "classnames": "^2.2.6",
@@ -19,17 +24,16 @@
         "react-redux": "^5.0.7",
         "redux": "^4.0.0",
         "redux-actions": "^2.6.1",
-        "uuid": "^3.3.2"
+        "uuid": "^3.3.2",
+        "@webcomponents/webcomponentsjs": "^2.1.3"
     },
     "devDependencies": {
         "@babel/core": "^7.1.2",
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
         "@babel/preset-env": "^7.1.0",
         "@babel/preset-react": "^7.0.0",
-        "@webcomponents/webcomponentsjs": "^2.1.3",
         "babel-loader": "^8.0.4",
         "css-loader": "^1.0.0",
-        "extract-text-webpack-plugin": "^3.0.2",
         "mini-css-extract-plugin": "^0.4.1",
         "node-sass": "^4.9.3",
         "sass-loader": "^7.1.0",

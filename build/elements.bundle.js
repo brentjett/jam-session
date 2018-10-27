@@ -855,10 +855,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pol
 /*!**********************************************************!*\
   !*** ./src/elements/web-components/font-picker/index.js ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/elements/web-components/font-picker/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\n\nvar isSetup = false;\n\nclass FontPicker extends _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__[\"LitElement\"] {\n  constructor() {\n    super();\n\n    const loadScript = (url, resolve, reject) => {\n      const el = document.createElement('script');\n      el.src = url;\n      el.async = true;\n\n      el.onload = () => resolve(); // loaded fine\n\n\n      el.onerror = () => reject(); // didn't load, throw exception\n\n\n      document.head.appendChild(el); // adding script to document kicks off loading\n    };\n\n    if (!isSetup) {\n      var typkt = new Promise((resolve, reject) => loadScript('http://use.typekit.net/previewkits/pk-v1.js', resolve, reject));\n      var ccsdk = new Promise((resolve, reject) => loadScript('https://cdn-creativesdk.adobe.io/v1/csdk.js', resolve, reject));\n      Promise.all([typkt, ccsdk]).then(() => {\n        // Setup Typekit Auth\n        window.TypekitPreview.setup({\n          'auth_id': '8aa27db63a8c4a49ac93bc25e2530493',\n          'auth_token': 'e9a65410-e240-4ccd-b7fe-b7daa2a1b9cb'\n        });\n        isSetup = true;\n        this.setupFonts();\n      }).catch(() => console.log('nope, didnt load.'));\n    }\n  }\n\n  static get properties() {\n    return {};\n  }\n\n  setupFonts() {\n    console.log('set up some fonts, hey');\n  }\n\n  render() {\n    return _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__[\"html\"]`\n            <div>Font Picker</div>\n        `;\n  }\n\n}\n\ncustomElements.define('font-picker', FontPicker);\n\n//# sourceURL=webpack:///./src/elements/web-components/font-picker/index.js?");
 
 /***/ }),
 
@@ -882,7 +883,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hero_one__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-one */ \"./src/elements/web-components/hero-one/index.js\");\n/* harmony import */ var _features_row_one__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features-row-one */ \"./src/elements/web-components/features-row-one/index.js\");\n/* harmony import */ var _jam_session__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./jam-session */ \"./src/elements/web-components/jam-session/index.js\");\n/* harmony import */ var _font_picker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./font-picker */ \"./src/elements/web-components/font-picker/index.js\");\n/* harmony import */ var _font_picker__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_font_picker__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack:///./src/elements/web-components/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hero_one__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero-one */ \"./src/elements/web-components/hero-one/index.js\");\n/* harmony import */ var _features_row_one__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features-row-one */ \"./src/elements/web-components/features-row-one/index.js\");\n/* harmony import */ var _jam_session__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./jam-session */ \"./src/elements/web-components/jam-session/index.js\");\n/* harmony import */ var _font_picker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./font-picker */ \"./src/elements/web-components/font-picker/index.js\");\n\n\n\n\n\n//# sourceURL=webpack:///./src/elements/web-components/index.js?");
 
 /***/ }),
 
