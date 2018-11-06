@@ -1,2 +1,4 @@
 
-import './web-components'
+//import './web-components'
+
+import './custom-elements'

@@ -11,7 +11,6 @@ module.exports = {
     watch: true,
     mode: 'development',
     entry: {
-        main: './src/main/index.js',
         elements: './src/elements/index.js'
     },
     output: {
