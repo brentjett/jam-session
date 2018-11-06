@@ -5,6 +5,8 @@ const rows = [
     <ss-row name="triple"></ss-row>,
     <ss-row name="reading-list"></ss-row>,
     <ss-row name="split-feature"></ss-row>,
+    <ss-row name="diy"></ss-row>,
+    <ss-row name="hero-1"></ss-row>,
 ]
 
 // React Component
@@ -34,9 +36,19 @@ class RowSwitcher extends Component {
 
     render() {
         const element = rows[this.state.index]
+        const toolbarStyles = {
+            display: 'flex',
+            flexDirection: 'row',
+            padding: 4,
+            height: 40,
+            background: 'white',
+            border: '1px solid #e2e2e2',
+            alignItems: 'stretch',
+            justifyContent: 'center'
+        }
         return (
             <div>
-                <div>
+                <div style={toolbarStyles}>
                     <button onClick={this.onPrev}>Prev</button>
                     <button onClick={this.onNext}>Next</button>
                 </div>
