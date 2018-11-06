@@ -15,11 +15,12 @@ const rows = {
         srcset: base +  'assets/split-feature.png 2x',
     },
     "hero-1": {
-        srcset: base + 'assets/hero1.png 2x'
+        srcset: base + 'assets/hero1.png 2x',
+        background: '#d5ac89'
     },
     "diy": {
         srcset: base + 'assets/diy.png 2x',
-        background: 'black'
+        background: '#171819'
     }
 }
 
