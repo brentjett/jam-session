@@ -1,16 +1,18 @@
 import { LitElement, html } from '@polymer/lit-element'
 
+const base = 'https://cdn.jsdelivr.net/gh/brentjett/jam-session/build/'
+
 const rows = {
     triple: {
         background: '#dbe7f6',
-        srcset: 'assets/triple-feature.png 2x'
+        srcset: base + 'assets/triple-feature.png 2x'
     },
     "reading-list": {
-        srcset: 'assets/reading-list.png 2x',
+        srcset: base +  'assets/reading-list.png 2x',
         background: '#f9f9fb',
     },
     "split-feature": {
-        srcset: 'assets/split-feature.png 2x',
+        srcset: base +  'assets/split-feature.png 2x',
     }
 }
 
