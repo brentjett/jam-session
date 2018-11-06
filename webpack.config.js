@@ -11,7 +11,7 @@ module.exports = {
     watch: true,
     mode: 'development',
     entry: {
-        test: './src/elements/index.js'
+        jam: './src/elements/index.js'
     },
     output: {
         path: path.resolve( __dirname, 'build' ),
