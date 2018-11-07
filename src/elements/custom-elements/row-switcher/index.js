@@ -9,6 +9,24 @@ const rows = [
     <ss-row name="hero-1"></ss-row>,
 ]
 
+const RowGrid = props => {
+
+    const gridStyles = {
+        display: 'grid',
+        gridGap: 10,
+        gridTemplateColumns: `repeat(auto-fill, minmax(400px,1fr))`,
+    }
+    return (
+        <div style={gridStyles}>
+            { rows.map( (item, i) => (
+                <div key={i}>
+                    {item}
+                </div>
+            ))}
+        </div>
+    )
+}
+
 // React Component
 class RowSwitcher extends Component {
     constructor(props) {
@@ -48,6 +66,7 @@ class RowSwitcher extends Component {
         }
         return (
             <div>
+
                 <div style={toolbarStyles}>
                     <button onClick={this.onPrev}>Prev</button>
                     <button onClick={this.onNext}>Next</button>
@@ -69,4 +88,4 @@ class RowSwitcherElement extends HTMLElement {
         )
     }
 }
-customElements.define('row-switcher', RowSwitcherElement )
+window.customElements.define('row-switcher', RowSwitcherElement )

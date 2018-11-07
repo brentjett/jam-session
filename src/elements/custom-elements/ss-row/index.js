@@ -42,6 +42,9 @@ class SSRowElement extends LitElement {
             <style>
                 .outer {
                     background: ${row.background};
+                    float:none;
+                    clear:both;
+                    overflow:hidden;
                 }
                 img {
                     position: relative;
@@ -56,4 +59,4 @@ class SSRowElement extends LitElement {
         `
     }
 }
-customElements.define('ss-row', SSRowElement )
+window.customElements.define('ss-row', SSRowElement )
