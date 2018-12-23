@@ -185,4 +185,4 @@ class SwatchGrid extends LitElement {
     }
 }
 
-customElements.define('swatch-grid', SwatchGrid )
+window.customElements.define('swatch-grid', SwatchGrid )

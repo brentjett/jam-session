@@ -25,12 +25,15 @@ const rows = {
 }
 
 class SSRowElement extends LitElement {
+
+    // Setup What Attributes To Listen For
     static get properties() {
         return {
             name: { type: String }
         }
     }
 
+    // Render The Element
     render() {
         const defaults = {
             background: '#000000',
